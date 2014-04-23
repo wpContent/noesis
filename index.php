@@ -4,11 +4,21 @@
   /* rendering the page and display the header/nav
   /*-----------------------------------------------------------------------------------*/
 ?><!-- START OF header.php -->
+<?php
+  /**
+   * TODO: Move to header.php
+   */
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); // Get the language to be used from the admin > settings ?>>
   
   <head>
     <!--  SEO & META -->
+    <?php
+      /**
+       * TODO: Add conditional code to stop the homepage displying blank title
+       */
+    ?>
     <title><?php wp_title(':', true, 'right'); // Show the site name and post/page name ?></title>
     
     <!-- STYLES -->
@@ -42,6 +52,11 @@
       </header>
       
       <!-- NAV -->
+      <?php
+        /**
+         * TODO: Register navs in functions and extra theme menu locations
+         */
+        ?>
       <nav>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
       </nav>
@@ -51,6 +66,13 @@
       <section>
         
         <!-- START OF "The Loop" -->
+        <?php
+        /**
+         * TODO: use the_ID() to generate a class for each post
+         * TODO: Add metadat for author, time, categories, taxonomy etc
+         * TODO: Add moretag functionality
+         */
+        ?>
         <?php if( have_posts() ) : ?>
 
           <?php while( have_posts() ) : the_post();  ?>
@@ -65,17 +87,29 @@
           <?php endwhile; ?>
 
         <?php endif; ?>
+        <!-- END OF "The Loop" -->
 
       </section>
-      <!-- END OF "The Loop" -->
 
       <!-- START OF sidebar.php -->
+      <?php
+        /**
+         * TODO: Move to sidebar.php
+         * TODO: Add dynamic_sidebar functions
+         */
+      ?>
       <aside>
         <p>This is the_sidebar()</p>
       </aside>
       <!-- END OF sidebar.php -->
 
       <!-- START OF footer.php -->
+      <?php
+        /**
+         * TODO: Move to footer.php
+         * TODO: Add the_date() to generate year
+         */
+       ?>
       <footer>
         <p>This is the_footer()</p>
       </footer>
