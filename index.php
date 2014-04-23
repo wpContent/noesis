@@ -47,9 +47,25 @@
       </nav>
       <!-- END OF header.php -->
 
-      <!-- START OF "The Loop" -->
+      
       <section>
-        <article><p>This is the_content()</p></article>
+        
+        <!-- START OF "The Loop" -->
+        <?php if( have_posts() ) : ?>
+
+          <?php while( have_posts() ) : the_post();  ?>
+
+        <article>
+          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+          
+          <?php the_content(); ?>
+
+        </article>
+          
+          <?php endwhile; ?>
+
+        <?php endif; ?>
+
       </section>
       <!-- END OF "The Loop" -->
 
