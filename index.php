@@ -8,18 +8,17 @@
   /**
    * TODO: Move to header.php
    */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); // Get the language to be used from the admin > settings ?>>
   
   <head>
+    
     <!--  SEO & META -->
     <?php
       /**
        * TODO: Add conditional code to stop the homepage displying blank title
        */
-    ?>
-    <title><?php wp_title(':', true, 'right'); // Show the site name and post/page name ?></title>
+    ?><title><?php wp_title(':', true, 'right'); // Show the site name and post/page name ?></title>
     
     <!-- STYLES -->
     <?php // We'll loading our theme directory style.css by queuing scripts in our functions.php file ?>
@@ -33,6 +32,7 @@
       // Removing this function call will disable all kinds of plugins and Wordpress default insertions. 
       // Our scripts and style.css will be inserted here from our functions.php files
     ?>
+
   </head>
 
   <body <?php body_class(); 
@@ -40,6 +40,7 @@
   // i.e. on a home page, it will return [class="home"]
   // on a single post, it will return [class="single postid-{ID}"] etc.
   ?>>
+    
     <!-- CONTAINER -->
     <div id="container">
       
@@ -56,12 +57,12 @@
         /**
          * TODO: Register navs in functions and extra theme menu locations
          */
-        ?>
-      <nav>
+      ?><nav>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
-      </nav>
-      <!-- END OF header.php -->
 
+      </nav>
+
+      <!-- END OF header.php -->
       
       <section>
         
@@ -71,9 +72,10 @@
          * TODO: use the_ID() to generate a class for each post
          * TODO: Add metadat for author, time, categories, taxonomy etc
          * TODO: Add moretag functionality
+         * TODO: Add "edit post" functionality
+         * TODO: Ensure scheduled posts don't appear before they're meant to
          */
-        ?>
-        <?php if( have_posts() ) : ?>
+        ?><?php if( have_posts() ) : ?>
 
           <?php while( have_posts() ) : the_post();  ?>
 
@@ -87,6 +89,7 @@
           <?php endwhile; ?>
 
         <?php endif; ?>
+        
         <!-- END OF "The Loop" -->
 
       </section>
@@ -97,8 +100,7 @@
          * TODO: Move to sidebar.php
          * TODO: Add dynamic_sidebar functions
          */
-      ?>
-      <aside>
+      ?><aside>
         <p>This is the_sidebar()</p>
       </aside>
       <!-- END OF sidebar.php -->
@@ -109,12 +111,12 @@
          * TODO: Move to footer.php
          * TODO: Add the_date() to generate year
          */
-       ?>
-      <footer>
+       ?><footer>
         <p>This is the_footer()</p>
       </footer>
     </div><!-- #container  -->
     <?php wp_footer(); ?>
+
   </body>
 </html>
 <!-- END OF footer.php -->
