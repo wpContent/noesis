@@ -2,7 +2,7 @@
       <footer>
         <p>&copy; <?php echo date('Y'); ?> - Luke Watts</p>
       </footer>
-    </div><!-- #container  -->
+    </div><!-- container  -->
     <?php wp_footer(); ?>
 
   </body>
