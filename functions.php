@@ -29,17 +29,28 @@
  * @since Noesis 1.0
  */
 
-/*
-   * Make Noesis available for translation.
-   *
-   * Translations can be added to the /languages/ directory.
-   */
+/* ========================================
+ * OVERALL FUNCTIONS
+ * ======================================== */
+
+/**
+ * Make Noesis available for translation.
+ *
+ * Translations can be added to the /languages/ directory.
+ */
 load_theme_textdomain( 'noesis', get_template_directory() . '/languages' );
+
+
+/* ========================================
+ * HEADER FUNCTIONS
+ * ======================================== */
 
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
- *
+ * 
+ * @package Wordpress
+ * @subpackage Noesis
  * @since Noesis 1.0
  *
  * @param string $title Default title text for current view.
@@ -70,3 +81,42 @@ function noesis_wp_title( $title, $sep ) {
   return $title;
 }
 add_filter( 'wp_title', 'noesis_wp_title', 10, 2 );
+
+/* ========================================
+ * SIDEBAR FUNCTIONS
+ * ======================================== */
+
+/**
+ * Register and Widgetize Sidebars
+ *
+ * Calling register_sidebar() multiple times to register a number of sidebars
+ * is preferable to using register_sidebars() to create a bunch in one go,
+ * because it allows you to assign a unique name to each sidebar
+ * (eg: “Right Sidebar”, “Left Sidebar”). Although these names only appear
+ * in the admin interface it is a best practice to name each sidebar specifically,
+ * giving the administrative user some idea as to the context for which
+ * each sidebar will be used.
+ *
+ * @package Wordpress
+ * @subpackage Noesis
+ * @since Noesis 1.0
+ */
+function noesis_widgets_init() {
+  /**
+   * Right Sidebar
+   *
+   * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+   */
+  register_sidebar( array(
+    'name'          => __( 'Right Sidebar', 'noesis' ), // Sidebar name (default is localized 'Sidebar' and numeric ID).
+    'id'            => 'noesis-right-sidebar', // Sidebar id - Must be all in lowercase, with no spaces (default is a numeric auto-incremented ID).
+    'description'   => __('Right-hand Sidebar of the Noesis Theme'), // Text description of what/where the sidebar is. Shown on widget management screen. (default: empty)
+    'class'         => '', // CSS class anem to assign to widget HTML (Default: empty)
+    'before_widget' => '<li id="%1$s">', // HTML to be placed before every widget (default: <li id="%1$n">) Uses sprintf for variable substitution
+    'after_widget'  => '</li>', // HTML to be placed after every widget
+    'before_title'  => '<h3>', // HTML to be placed before every title
+    'after_title'   => '</h3>' // HTML to be placed after every title
+  ) );
+}
+
+add_action( 'widgets_init', 'noesis_widgets_init' );
