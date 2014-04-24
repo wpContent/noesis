@@ -52,7 +52,7 @@
       <?php
         /**
          * TODO: Register navs in functions and extra theme menu locations
-         * Move Navigation into it's own require_once file
+         * TODO: Move Navigation into it's own require_once file
          */
       ?><nav>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
