@@ -55,7 +55,7 @@
          * TODO: Move Navigation into it's own require_once file
          */
       ?><nav>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); // Display the user-defined menu in Appearance > Menus ?>
       </nav>
 
       <!-- END OF header.php -->
