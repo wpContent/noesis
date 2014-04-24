@@ -107,7 +107,7 @@ function noesis_widgets_init() {
    *
    * @link http://codex.wordpress.org/Function_Reference/register_sidebar
    */
-  register_sibebar( array(
+  register_sidebar( array(
     'name'          => __( 'Right Sidebar', 'noesis' ), // Sidebar name (default is localized 'Sidebar' and numeric ID).
     'id'            => 'noesis-right-sidebar', // Sidebar id - Must be all in lowercase, with no spaces (default is a numeric auto-incremented ID).
     'description'   => __('Right-hand Sidebar of the Noesis Theme'), // Text description of what/where the sidebar is. Shown on widget management screen. (default: empty)
@@ -119,4 +119,4 @@ function noesis_widgets_init() {
   ) );
 }
 
-add_action( 'widget_init', 'noesis_widgets_init' );
+add_action( 'widgets_init', 'noesis_widgets_init' );

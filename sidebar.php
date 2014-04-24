@@ -1,9 +1,13 @@
-      <!-- START OF sidebar.php -->
       <?php
         /**
-         * TODO: Add dynamic_sidebar functions
+         * Check of the given sidebar has any widgets (is in use/is active)
+         *
+         * @uses $index (mixed) (required) Sidebar name or id.
+         * @return (boolean) True if the sidebar is in use, otherwise the function returns false
          */
-      ?><aside>
-        <p>This is the_sidebar()</p>
-      </aside>
-      <!-- END OF sidebar.php -->
+        if( is_active_sidebar( 'noesis-right-sidebar' ) ) : ?><!-- START OF sidebar.php -->
+        <aside>
+          <?php dynamic_sidebar( 'noesis-right-sidebar' ); ?>
+        </aside>
+        <!-- END OF sidebar.php -->
+        <?php endif; ?>
