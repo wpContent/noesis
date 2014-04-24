@@ -38,7 +38,7 @@
   ?>>
     
     <!-- CONTAINER -->
-    <div id="container">
+    <div>
       
       <!-- HEADER -->
       <header>
