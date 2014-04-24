@@ -105,18 +105,4 @@
       </aside>
       <!-- END OF sidebar.php -->
 
-      <!-- START OF footer.php -->
-      <?php
-        /**
-         * TODO: Move to footer.php
-         * TODO: Add the_date() to generate year
-         */
-       ?><footer>
-        <p>&copy; <?php echo date('Y'); ?> - Luke Watts</p>
-      </footer>
-    </div><!-- #container  -->
-    <?php wp_footer(); ?>
-
-  </body>
-</html>
-<!-- END OF footer.php -->
+<?php get_footer(); ?>
