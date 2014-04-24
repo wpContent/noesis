@@ -31,15 +31,7 @@
 
       </section>
 
-      <!-- START OF sidebar.php -->
-      <?php
-        /**
-         * TODO: Move to sidebar.php
-         * TODO: Add dynamic_sidebar functions
-         */
-      ?><aside>
-        <p>This is the_sidebar()</p>
-      </aside>
-      <!-- END OF sidebar.php -->
+<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>
