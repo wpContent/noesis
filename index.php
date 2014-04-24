@@ -6,7 +6,7 @@
         <!-- START OF "The Loop" -->
         <?php
         /**
-         * TODO: use the_ID() to generate a class for each post
+         * TODO: use the_ID() to generate a CSS class for each post
          * TODO: Add metadat for author, time, categories, taxonomy etc
          * TODO: Add moretag functionality
          * TODO: Add "edit post" functionality
@@ -17,17 +17,16 @@
           <?php while( have_posts() ) : the_post();  ?>
 
         <article>
+          
           <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
           
           <?php the_content(); ?>
-
-        </article>
           
+        </article>          
+
           <?php endwhile; ?>
 
-        <?php endif; ?>
-        
-        <!-- END OF "The Loop" -->
+        <?php endif; ?><!-- END OF "The Loop" -->
 
       </section>
 

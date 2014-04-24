@@ -82,6 +82,35 @@ function noesis_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'noesis_wp_title', 10, 2 );
 
+/**
+ * Register the menus used by Noesis
+ *
+ * @link http://codex.wordpress.org/Navigation_Menus
+ * @link http://codex.wordpress.org/Function_Reference/register_nav_menus
+ *
+ * @package Wordpress
+ * @subpackage Noesis
+ * @since Noesis 1.0
+ */
+function noesis_register_nav_menus() {
+  /**
+   * Register Nav Menu
+   *
+   * Registers a single custom navigation menu in the new custom menu editor
+   * of WordPress 3.0. This allows for creation of custom menus in the dashboard
+   * for use in your theme. 
+   * 
+   * @link codex.wordpress.org/Function_Reference/register_nav_menu
+   *
+   * @param  $location (string) (required) Menu location identifier, like a slug.
+   * @param   $description (string) (required) Menu description - for identifying the menu in the dashboard.
+   */
+  register_nav_menu( 'header-menu', __( 'Header Menu' ) ); // Register menu location in admin and localise name
+}
+
+add_action( 'init', 'noesis_register_nav_menus' );
+
+
 /* ========================================
  * SIDEBAR FUNCTIONS
  * ======================================== */
