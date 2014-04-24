@@ -112,7 +112,7 @@
          * TODO: Add the_date() to generate year
          */
        ?><footer>
-        <p>This is the_footer()</p>
+        <p>&copy; <?php echo date('Y'); ?> - Luke Watts</p>
       </footer>
     </div><!-- #container  -->
     <?php wp_footer(); ?>
