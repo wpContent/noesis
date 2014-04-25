@@ -1,3 +1,15 @@
+/*
+Theme Name: Noesis
+Theme URI: http://demo.luke-watts.com/noesis
+Author: Luke Watts
+Author URI: http://luke-watts.com/
+Description: Semantic, minimally styled starter theme.
+Version: 1.0
+Tags: semantic, minimal styles
+Text Domain: noesis
+
+This is a minimally styled starter theme which will be the foundation of all future themes....EVER!
+*/
 *,
 *::before,
 *::after {
@@ -50,7 +62,7 @@ body > div:first-child section::before, body > div:first-child section::after {
 body > div:first-child section::after {
   clear: both;
 }
-body > div:first-child section article {
+body > div:first-child section main {
   width: 75%;
   float: left;
   padding-left: 1em;

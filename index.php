@@ -30,7 +30,7 @@
 
           <?php endif; ?><!-- END OF "The Loop" -->
 
-        <main>
+        </main>
 
 <?php get_sidebar(); ?>
 

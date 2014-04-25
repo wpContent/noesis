@@ -1,14 +1,87 @@
 /*
-Theme Name: Tesla
-Theme URI: http://luke-watts.com
+Theme Name: Noesis
+Theme URI: http://demo.luke-watts.com/noesis
 Author: Luke Watts
 Author URI: http://luke-watts.com/
-Description: Semantic, unstyled test theme.
+Description: Semantic, minimally styled starter theme.
 Version: 1.0
-Tags: semantic, unstyled
-Text Domain: tesla
+Tags: semantic, minimal styles
+Text Domain: noesis
 
-This is an unstyled test theme which will be the foundation of all future themes....EVER!
+This is a minimally styled starter theme which will be the foundation of all future themes....EVER!
 */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-@import url("css/screen.css");
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+blockquote {
+  width: 22em;
+  font-family: Georgia, sans-serif;
+  font-size: 1.5em;
+}
+blockquote::before {
+  content: "\201C";
+  font-size: 2em;
+}
+blockquote::after {
+  content: "\201D";
+  font-size: 2em;
+  float: right;
+}
+
+body > div:first-child {
+  margin: 0 auto;
+  width: 99%;
+  max-width: 1200px;
+  border: black 1px solid;
+}
+body > div:first-child > header, body > div:first-child > footer {
+  text-align: center;
+}
+body > div:first-child section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  *zoom: 1;
+}
+body > div:first-child section::before, body > div:first-child section::after {
+  content: " ";
+  display: table;
+}
+body > div:first-child section::after {
+  clear: both;
+}
+body > div:first-child section main {
+  width: 75%;
+  float: left;
+  padding-left: 1em;
+  border: black 1px solid;
+}
+body > div:first-child section aside {
+  width: 25%;
+  float: left;
+  padding-left: 1em;
+  border: black 1px solid;
+}
+
+nav {
+  border: black 1px solid;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 2em;
+}

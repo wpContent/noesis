@@ -1,3 +1,16 @@
+/*
+Theme Name: Noesis
+Theme URI: http://demo.luke-watts.com/noesis
+Author: Luke Watts
+Author URI: http://luke-watts.com/
+Description: Semantic, minimally styled starter theme.
+Version: 1.0
+Tags: semantic, minimal styles
+Text Domain: noesis
+
+This is a minimally styled starter theme which will be the foundation of all future themes....EVER!
+*/
+
 @import "compass";
 
 $site-width: 1200px;
@@ -78,7 +91,7 @@ body > div:first-child {
         clear: both;
       }
     
-      article {
+      main {
         // Dimensions
         width: 75%;
         

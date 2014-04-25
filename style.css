@@ -10,7 +10,6 @@ Text Domain: noesis
 
 This is a minimally styled starter theme which will be the foundation of all future themes....EVER!
 */
-
 *,
 *::before,
 *::after {
@@ -63,7 +62,7 @@ body > div:first-child section::before, body > div:first-child section::after {
 body > div:first-child section::after {
   clear: both;
 }
-body > div:first-child section article {
+body > div:first-child section main {
   width: 75%;
   float: left;
   padding-left: 1em;
