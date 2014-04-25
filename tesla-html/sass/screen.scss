@@ -1,8 +1,111 @@
 @import "compass";
 
+@mixin debug($color: red) {
+  @if $color {
+    border: unquote($color) 1px solid;
+  }
+  @else {
+    border: red 1px solid;
+  }
+}
+
 *,
 *::before,
 *::after {
   @include box-sizing("border-box");
 }
 
+// IMAGES
+img {
+  // Dimensions
+  max-width: 100%;
+  // Force aspect ratios
+  height: auto !important;
+}
+
+// QUOTES
+blockquote {
+  width: 22em;
+  font: {
+    family: Georgia, sans-serif;
+    size: 1.5em;
+  }
+  
+  &::before {
+    content: "\201C";
+    font-size: 2em;
+  }
+  
+  &::after {
+    content: "\201D";
+    font-size: 2em;
+    float: right;
+  }
+}
+
+// CONTAINER
+div:first-child {
+  margin: 0 auto;
+  width: 960px;
+
+  @include debug();
+  
+  // HEADER
+  > header, > footer {
+    text-align: center;
+  }
+  
+  section {
+    // Dimensions
+    width: 100%;
+    
+    // Positioning
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    *zoom: 1;
+    
+      &::before, &::after {
+        content: " ";
+        display: table;
+      }
+    
+      &::after {
+        clear: both;
+      }
+    
+      article {
+        // Dimensions
+        width: 75%;
+        
+        // Positioning
+        float: left;
+        padding-left: 1em;
+
+        @include debug();
+      }
+  }
+
+  aside {
+    // Dimensions
+    width: 25%;
+
+    // Positioning
+    float: left;
+    padding-left: 1em;
+  }
+}
+
+nav ul {
+  list-style: none;
+  
+  li {
+    display: inline-block;
+    margin-right: 2em;
+  }
+}
+
+aside {
+  @include debug(yellow);
+}

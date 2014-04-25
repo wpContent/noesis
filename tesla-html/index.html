@@ -8,6 +8,7 @@
     <title>The Labs : Where the magic happens</title>
     
     <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
     
     <!-- SCRIPTS -->
     
@@ -22,7 +23,13 @@
     <link rel='canonical' href='http://127.0.0.1/labs/' />
     <link rel='shortlink' href='http://127.0.0.1/labs/' />
     
-    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <style type="text/css">
+      .recentcomments a {
+        display:inline !important;
+        padding:0 !important;
+        margin:0 !important;
+      }
+    </style>
 
   </head>
 
@@ -50,7 +57,7 @@
 
             <li><a href="#">About</a></li>
 
-            <li href="'#'">Blog</a></li>
+            <li><a href="#">Blog</a></li>
 
           </ul>
 
@@ -62,80 +69,69 @@
 
       <section>
 
-      <!-- START OF "The Loop" -->
+        <!-- START OF "The Loop" -->
+        <main>
+          <article>
 
-      <article>
+            <h1><a href="">Home</a></h1>
 
-        <h1><a href="">Home</a></h1>
+            <p>Note that you will probably want to test this page in conjunction with the <span style="text-decoration: underline;"><strong>Blog</strong></span> page.</p>
 
-        <p>Note that you will probably want to test this page in conjunction with the <span style="text-decoration: underline;"><strong>Blog</strong></span> page.</p>
-
-        <p>To test this page:</p>
-
-        <ul>
-
-          <li>Navigate to <strong><em>Settings &gt; Reading</em></strong> in the WordPress admin.</li>
-
-          <li>Then use the settings in the screenshot below.</li>
-
-        </ul>
-
-        <p>
-          <img alt="Static Pages" src="http://wptest.io/demo/wp-content/uploads/2013/03/static-pages.png" width="1390" height="1022" />
-        </p>
-
-        <p>A few things to check once this is done.</p>
-
-        <ul>
-
-          <li>Navigating to the root URL loads this page.</li>
-
-          <li>The site title should be an <code>H1</code> and the page title should be an <code>H2</code> (if displayed).</li>
-
-          <li>Check that the browser window / tab name is what you intend it to show.</li>
-
-          <li>If your theme displays breadcrumbs, they should probably not show when this page is the front page.</li>
-
-        </ul>
-
-      </article>
-
-      <!-- END OF "The Loop" -->
-
-      </section>
-
-      <!-- START OF sidebar.php -->
-      <aside>
-
-        <li>
-
-          <h3>Menu</h3>
-
-          <div>
+            <p>To test this page:</p>
 
             <ul>
 
-              <li>
-                <a href="#">Home</a>
-              </li>
+              <li>Navigate to <strong><em>Settings &gt; Reading</em></strong> in the WordPress admin.</li>
 
-              <li>
-                <a href="#">About</a>
-              </li>
-
-              <li>
-                <a href="#">Blog</a>
-              </li>
+              <li>Then use the settings in the screenshot below.</li>
 
             </ul>
 
-          </div>
+            <p>
+              <img alt="Static Pages" src="http://wptest.io/demo/wp-content/uploads/2013/03/static-pages.png" width="1390" height="1022" />
+            </p>
 
-        </li>
+            <p>A few things to check once this is done.</p>
 
-      </aside>
-      <!-- END OF sidebar.php -->
-            
+            <ul>
+
+              <li>Navigating to the root URL loads this page.</li>
+
+              <li>The site title should be an <code>H1</code> and the page title should be an <code>H2</code> (if displayed).</li>
+
+              <li>Check that the browser window / tab name is what you intend it to show.</li>
+
+              <li>If your theme displays breadcrumbs, they should probably not show when this page is the front page.</li>
+
+            </ul>
+
+          </article>
+
+        </main>
+        <!-- END OF "The Loop" -->
+
+        <!-- START OF sidebar.php -->
+        <aside>
+          <li>
+            <h3>Menu</h3>
+            <div>
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </aside>
+        <!-- END OF sidebar.php -->
+  
+      </section>
       <!-- START OF footer.php -->
       <footer>
         <p>&copy; 2014 - Luke Watts</p>

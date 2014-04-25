@@ -5,3 +5,70 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+blockquote {
+  width: 22em;
+  font-family: Georgia, sans-serif;
+  font-size: 1.5em;
+}
+blockquote::before {
+  content: "\201C";
+  font-size: 2em;
+}
+blockquote::after {
+  content: "\201D";
+  font-size: 2em;
+  float: right;
+}
+
+div:first-child {
+  margin: 0 auto;
+  width: 960px;
+  border: red 1px solid;
+}
+div:first-child > header, div:first-child > footer {
+  text-align: center;
+}
+div:first-child section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  *zoom: 1;
+}
+div:first-child section::before, div:first-child section::after {
+  content: " ";
+  display: table;
+}
+div:first-child section::after {
+  clear: both;
+}
+div:first-child section article {
+  width: 75%;
+  float: left;
+  padding-left: 1em;
+  border: red 1px solid;
+}
+div:first-child aside {
+  width: 25%;
+  float: left;
+  padding-left: 1em;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+aside {
+  border: yellow 1px solid;
+}
