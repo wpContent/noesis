@@ -40,6 +40,33 @@
  */
 load_theme_textdomain( 'noesis', get_template_directory() . '/languages' );
 
+/**
+ * Noesis Enqueue Scripts
+ *
+ * Register and enqueue stylesheets and scripts
+ *
+ * @package Wordpress
+ * @subpackage Noesis
+ * @since Noesis 1.0
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style
+ */
+function noesis_enqueue_scripts() {
+  
+  /**
+   * Load our main stylesheet.
+   *
+   * @param $handle (string) (required) Name used as a handle for the stylesheet. Default: none
+   * @param $src (string|boolean) (optional) URL to the stylesheet. Default: false
+   * @param $deps (array) (optional) Array of handles of any stylesheet that this stylesheet depends on. Default: array() 
+   * @param $ver (string|boolean) (optional) String specifying the stylesheet version number, if it has one. Defaul: false
+   * @param $media (string|boolean) (optional) String specifying the media for which this stylesheet has been defined. e.g. 'screen'. Default: 'all'
+   */
+  wp_enqueue_style( 'noesis-style', get_stylesheet_uri(), array(), '1.0', 'screen' );
+}
+
+add_action( 'wp_enqueue_scripts', 'noesis_enqueue_scripts' );
+
 
 /* ========================================
  * HEADER FUNCTIONS
