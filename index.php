@@ -2,6 +2,8 @@
       
       
       <section>
+
+        <main>
         
         <!-- START OF "The Loop" -->
         <?php
@@ -16,21 +18,23 @@
 
           <?php while( have_posts() ) : the_post();  ?>
 
-        <article>
-          
-          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-          
-          <?php the_content(); ?>
-          
-        </article>          
+          <article>
+            
+            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            
+            <?php the_content(); ?>
+            
+          </article>          
 
-          <?php endwhile; ?>
+            <?php endwhile; ?>
 
-        <?php endif; ?><!-- END OF "The Loop" -->
+          <?php endif; ?><!-- END OF "The Loop" -->
 
-      </section>
+        <main>
 
 <?php get_sidebar(); ?>
+
+      </section>
 
 
 <?php get_footer(); ?>
