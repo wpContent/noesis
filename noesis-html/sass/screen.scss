@@ -1,5 +1,7 @@
 @import "compass";
 
+$site-width: 1200px;
+
 @mixin debug($color: red) {
   @if $color {
     border: unquote($color) 1px solid;
@@ -44,11 +46,12 @@ blockquote {
 }
 
 // CONTAINER
-div:first-child {
+body > div:first-child {
   margin: 0 auto;
-  width: 960px;
+  width: 99%;
+  max-width: $site-width;
 
-  @include debug();
+  @include debug(black);
   
   // HEADER
   > header, > footer {
@@ -83,29 +86,31 @@ div:first-child {
         float: left;
         padding-left: 1em;
 
-        @include debug();
+        @include debug(black);
+      }
+
+      aside {
+        // Dimensions
+        width: 25%;
+
+        // Positioning
+        float: left;
+        padding-left: 1em;
+
+        @include debug(black);
       }
   }
-
-  aside {
-    // Dimensions
-    width: 25%;
-
-    // Positioning
-    float: left;
-    padding-left: 1em;
-  }
 }
 
-nav ul {
-  list-style: none;
-  
-  li {
-    display: inline-block;
-    margin-right: 2em;
-  }
-}
-
-aside {
-  @include debug(yellow);
+nav {
+  @include debug(black);
+    
+    ul {
+      list-style: none;
+      
+      li {
+        display: inline-block;
+        margin-right: 2em;
+      }
+    }
 }

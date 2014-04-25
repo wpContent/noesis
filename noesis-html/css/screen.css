@@ -26,15 +26,16 @@ blockquote::after {
   float: right;
 }
 
-div:first-child {
+body > div:first-child {
   margin: 0 auto;
-  width: 960px;
-  border: red 1px solid;
+  width: 99%;
+  max-width: 1200px;
+  border: black 1px solid;
 }
-div:first-child > header, div:first-child > footer {
+body > div:first-child > header, body > div:first-child > footer {
   text-align: center;
 }
-div:first-child section {
+body > div:first-child section {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -42,33 +43,33 @@ div:first-child section {
   margin-bottom: 0;
   *zoom: 1;
 }
-div:first-child section::before, div:first-child section::after {
+body > div:first-child section::before, body > div:first-child section::after {
   content: " ";
   display: table;
 }
-div:first-child section::after {
+body > div:first-child section::after {
   clear: both;
 }
-div:first-child section article {
+body > div:first-child section article {
   width: 75%;
   float: left;
   padding-left: 1em;
-  border: red 1px solid;
+  border: black 1px solid;
 }
-div:first-child aside {
+body > div:first-child section aside {
   width: 25%;
   float: left;
   padding-left: 1em;
+  border: black 1px solid;
 }
 
+nav {
+  border: black 1px solid;
+}
 nav ul {
   list-style: none;
 }
 nav ul li {
   display: inline-block;
   margin-right: 2em;
-}
-
-aside {
-  border: yellow 1px solid;
 }
