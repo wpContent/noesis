@@ -1,45 +1,147 @@
 <!-- START OF header.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   
   <head>
-    <title>the_title()</title>
+    
+    <!--  SEO & META -->
+    <title>The Labs : Where the magic happens</title>
+    
+    <!-- STYLES -->
+    
+    <!-- SCRIPTS -->
+    
+    <meta name='robots' content='noindex,follow' />
+    
+    <link rel="alternate" type="application/rss+xml" title="The Labs &raquo; Home Comments Feed" href="http://127.0.0.1/labs/home/feed/" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://127.0.0.1/labs/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://127.0.0.1/labs/wp-includes/wlwmanifest.xml" /> 
+    <link rel='prev' title='Amazon Store' href='http://127.0.0.1/labs/amazon-store/' />
+    <link rel='next' title='Blog' href='http://127.0.0.1/labs/blog/' />
+    <meta name="generator" content="WordPress 3.9" />
+    <link rel='canonical' href='http://127.0.0.1/labs/' />
+    <link rel='shortlink' href='http://127.0.0.1/labs/' />
+    
+    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
-    <link type="text/css" rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div id="container">
+
+    <!-- CONTAINER -->
+    <div>
+      
+      <!-- HEADER -->
       <header>
         <hgroup>
-          <h1>This is the bloginfo( 'name' )</h1>
-          <h2>This is the bloginfo( 'description' )</h2>
+          <h1>The Labs</h1>
+          <h2>Where the magic happens</h2>
         </hgroup>
       </header>
+        
+      <!-- NAV -->
       <nav>
-        <ul>
-          <li><a href="/tesla-html">Home</a></li>
-        </ul>
+
+        <div>
+
+          <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li href="'#'">Blog</a></li>
+
+          </ul>
+
+        </div>
+
       </nav>
+
       <!-- END OF header.php -->
 
-      <!-- START OF "The Loop" -->
       <section>
-        <article><p>This is the_content()</p></article>
-      </section>
+
+      <!-- START OF "The Loop" -->
+
+      <article>
+
+        <h1><a href="">Home</a></h1>
+
+        <p>Note that you will probably want to test this page in conjunction with the <span style="text-decoration: underline;"><strong>Blog</strong></span> page.</p>
+
+        <p>To test this page:</p>
+
+        <ul>
+
+          <li>Navigate to <strong><em>Settings &gt; Reading</em></strong> in the WordPress admin.</li>
+
+          <li>Then use the settings in the screenshot below.</li>
+
+        </ul>
+
+        <p>
+          <img alt="Static Pages" src="http://wptest.io/demo/wp-content/uploads/2013/03/static-pages.png" width="1390" height="1022" />
+        </p>
+
+        <p>A few things to check once this is done.</p>
+
+        <ul>
+
+          <li>Navigating to the root URL loads this page.</li>
+
+          <li>The site title should be an <code>H1</code> and the page title should be an <code>H2</code> (if displayed).</li>
+
+          <li>Check that the browser window / tab name is what you intend it to show.</li>
+
+          <li>If your theme displays breadcrumbs, they should probably not show when this page is the front page.</li>
+
+        </ul>
+
+      </article>
+
       <!-- END OF "The Loop" -->
+
+      </section>
 
       <!-- START OF sidebar.php -->
       <aside>
-        <p>This is the_sidebar()</p>
+
+        <li>
+
+          <h3>Menu</h3>
+
+          <div>
+
+            <ul>
+
+              <li>
+                <a href="#">Home</a>
+              </li>
+
+              <li>
+                <a href="#">About</a>
+              </li>
+
+              <li>
+                <a href="#">Blog</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </li>
+
       </aside>
       <!-- END OF sidebar.php -->
-
+            
       <!-- START OF footer.php -->
       <footer>
-        <p>This is the_footer()</p>
+        <p>&copy; 2014 - Luke Watts</p>
       </footer>
-    </div><!-- #container  -->
+    </div><!-- container  -->
+        
   </body>
 </html>
 <!-- END OF footer.php -->

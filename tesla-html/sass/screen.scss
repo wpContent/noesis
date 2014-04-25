@@ -1,1 +1,8 @@
 @import "compass";
+
+*,
+*::before,
+*::after {
+  @include box-sizing("border-box");
+}
+
