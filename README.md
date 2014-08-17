@@ -8,3 +8,5 @@ This is my first attempt at building a Wordpress theme. I've started with simple
 Each function and tag used in the theme is documented and (sometimes) has links to where you can read more on the Codex.
 
 I started working with just two files: index.php and style.css. These are the only two files you really need to get the theme to work once you have the right tags in them. Once I had the theme running I split the different parts into the more conventional header.php, sidebar.php, footer.php and then wrote some functions to get it to do the various things I think any base them should have. These include a menu location, a sidebar with widgets, and il8n support (Not fully supported yet).
+
+Full tutorial series on wpContent: http://www.wpcontent.co.uk/2014/05/how-to-build-a-wordpress-starter-theme-introduction/
